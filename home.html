@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A brief description of your webpage for SEO purposes.">
+    <meta name="keywords" content="relevant, keywords, for, seo">
+    <meta name="author" content="Your Name or Company Name">
+    <title>Your Webpage Title</title>
+
+    <!-- Open Graph Meta Tags for social media sharing -->
+    <meta property="og:title" content="Your Webpage Title">
+    <meta property="og:description" content="A brief description of your webpage for social media sharing.">
+    <meta property="og:image" content="URL to your image">
+    <meta property="og:url" content="https://yourwebsite.com">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your Webpage Title">
+    <meta name="twitter:description" content="A brief description of your webpage for Twitter.">
+    <meta name="twitter:image" content="URL to your image">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.oogleapis.com/css2?family=Astloch:wght@400;700&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Bruno+Ace&family=Diphylleia&family=Gruppo&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Hepta+Slab:wght@1..900&family=Italiana&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kavivanar&family=Lexend+Giga:wght@100..900&family=Michroma&family=Monsieur+La+Doulaise&family=Montaga&family=Phudu:wght@300..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Redacted+Script:wght@300;400;700&family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Syncopate:wght@400;700&family=Tenor+Sans&family=Yarndings+12&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    
+    <style>
+      body {
+        font-family: "Raleway" !important;
+      }
+
+      .red-bg {
+        background-color: #A35230;
+      }
+    </style>
+
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+</head>
+<body class="antialiased">
+<div x-data="{ sidebarOpen: false }" class="flex overflow-x-hidden h-screen">
+  <aside class="flex-shrink-0 flex flex-col border-r transition-all duration-300" :class="{ 'w-0': !sidebarOpen, 'w-full': sidebarOpen }">
+    <div class="h-full red-bg">
+        <div class="flex justify-end">
+            <button class="p-1 mr-2 mt-2" @click="sidebarOpen = !sidebarOpen">
+                <svg class="h-6 w-6" stroke="white" fill="none" viewBox="0 0 24 24">
+                    <path :class="{'hidden': open, 'inline-flex': !open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+                    <path :class="{'hidden': !open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+        <nav class="flex-1 h-5/6 flex flex-col justify-end text-white mx-auto w-4/5 text-2xl">
+            <a href="home.html" class="p-1">Home</a>
+            <a href="sobre.html" class="p-1">Sobre</a>
+            <a href="contato.html" class="p-1">Contato</a>
+        </nav>
+    </div>
+  </aside>
+  <div class="flex-1">
+    <header class="flex justify-between px-4 text-semibold text-gray-100 red-bg">
+      <div class="w-4/5 flex justify-center ml-8">
+        <img src="mlogo-03.png" alt="Logo" width="70">
+      </div>
+      <button class="p-1" @click="sidebarOpen = !sidebarOpen">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22" stroke="currentColor" class="h-8 w-8">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M0 6h22M4 12h18M8 18h14" />
+        </svg>
+      </button>
+    </header>
+    <main class="p-4">
+      Main Content
+    </main>
+  </div>
+</div>
+</body>
+</html>
